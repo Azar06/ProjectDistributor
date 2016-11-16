@@ -25,17 +25,19 @@ public class ProjectDistributor {
 		// just to know when the algo will finish
 		timeAnalyser = new TimeAnalyser();
 		
-		while(!isLastCombi(combi, nbProject)) {
+		boolean continu = true;
+		
+		while(continu) {
 			// calculate the injustice
 			double injustice = getInjustice(combi, studentGroups);
 			
-			
 			results.setResult(combi, injustice);
-			
-			combi = nextValidCombi(combi, nbProject);
+
+			continu = !isLastCombi(combi, nbProject);
+			if(continu) {
+				combi = nextValidCombi(combi, nbProject);
+			}
 		}
-		
-		
 		return results;
 	}
 	
