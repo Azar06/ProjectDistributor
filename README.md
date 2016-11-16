@@ -1,0 +1,2 @@
+# ProjectDistributor
+Brut force algorithm
