@@ -43,7 +43,7 @@ public class Application {
 		System.out.println("\n\n" + report);
 		
 		try{
-		    PrintWriter writer = new PrintWriter("C:\\Users\\zarag\\Desktop\\result.txt", "UTF-8");
+		    PrintWriter writer = new PrintWriter("result.txt", "UTF-8");
 		    writer.println(report);
 		    writer.close();
 		} catch (Exception e) {
